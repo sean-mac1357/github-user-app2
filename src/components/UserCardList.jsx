@@ -2,7 +2,7 @@ import UserCard from './UserCard'
 
 const UserCardList = (props) => {
     const { usersArray } = props;
-    console.log("Props: ", props)
+
     return (
         <ul>
             {usersArray.map((user, index) => (
