@@ -5,10 +5,9 @@ import {
     CardHeader,
     CardContent,
     CardImage,
-    Content,
-    Image
 } from 'bloomer';
-import 'bulma/css/bulma.css';
+import '../UserCard.css'
+
 
 const UserCard = (props) => {
     const { user } = props;
@@ -21,14 +20,14 @@ const UserCard = (props) => {
         <li>
             <Link to={`${url}${user.login}`}>
                 <Card>
-                    <CardHeader>
-                        <Title>
+                    <CardHeader className='is-flex is-justify-content-center'>
+                        <h1>
                             {user.login}
-                        </Title>
+                        </h1>
                     </CardHeader>
                     <CardContent>
                         <CardImage>
-                            <Image isRatio="1:1" src={user.avatar_url} />
+                            <img src={user.avatar_url} alt='a' />
                         </CardImage>
                     </CardContent>
                 </Card>

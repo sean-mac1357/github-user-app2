@@ -2,6 +2,7 @@ import './App.css';
 import SearchForm from './components/SearchForm';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import UserProfile from './components/UserProfile';
+import 'bulma/css/bulma.css';
 
 function App() {
   return (

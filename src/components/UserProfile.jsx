@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import {
-    Message,
-    MessageHeader,
-    MessageBody
+    LevelLeft,
+    LevelItem,
 } from "bloomer";
 import "bulma/css/bulma.css";
 
@@ -24,13 +23,10 @@ const UserProfile = () => {
 
     return (
         <>
-        <Message>
-            
-        </Message>
             <h1>{username}</h1>
             {repoList.map((repo) => (
                 <p key={repo.id}>{repo.name}</p>
-            ))};
+            ))}
         </>
     )
 }

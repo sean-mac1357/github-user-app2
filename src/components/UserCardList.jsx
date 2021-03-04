@@ -7,7 +7,7 @@ const UserCardList = (props) => {
         <ul>
             {usersArray.map((user, index) => (
                 <UserCard user={user} key={index} />
-            ))};
+            ))}
         </ul>
     );
 }

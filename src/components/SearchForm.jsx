@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import UserCardList from './UserCardList';
+import {
+    Field,
+    Label,
+    Button,
+    Input
+} from 'bloomer';
 
 class SearchForm extends Component {
     constructor(props) {
@@ -31,16 +37,24 @@ class SearchForm extends Component {
         return(
             <>
                 <form onSubmit={this._handleSubmit}>
-                    <input 
-                    type="text"
-                    name="username"
-                    placeholder="Enter Username"
-                    value={this.state.username}
-                    onChange={(event) => {
-                        this._onChange("username", event.target.value);
-                    }}
-                    />
-                    <button type="submit">Get User</button>
+                    <Field isGrouped style={{justifyContent: "center", marginTop: 20}}>
+                        <Label>
+                            <Input 
+                                type="text"
+                                name="username"
+                                placeholder="Enter Username"
+                                value={this.state.username}
+                                onChange={(event) => {
+                                    this._onChange("username", event.target.value) 
+                            }}
+                            />
+                        </Label>
+                        <Button style={{margin: '0 20px'}}
+                        className='center-button'
+                        type='submit'
+                        isColor='primary'>Submit</Button>
+                        
+                    </Field>
                 </form>
                 {usersArray.length ? <UserCardList usersArray={usersArray}/> : <p>No Users to display</p>}
             </>
